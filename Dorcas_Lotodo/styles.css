@@ -1,0 +1,352 @@
+/* ============================================================
+   Stylesheet: styles.css
+   Project: Dorcas Lotodo - Curriculum Vitae Website
+   Course: INS 322 - Web Design and Management
+   Student Name: Dorcas Lotodo
+   Registration Number: [Your Registration Number]
+   Colour Palette:
+       Gold    #F5A800
+       Black   #1A1A1A
+       White   #FFFFFF
+       Cream   #FFF8E7
+       Charcoal #2E2E2E
+       Gold Dark #C98A00
+   ============================================================ */
+
+/* --- Google Font Import --- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap');
+
+/* ============================================================
+   CSS VARIABLES
+   ============================================================ */
+:root {
+    --gold:        #F5A800;
+    --gold-dark:   #C98A00;
+    --gold-light:  #FFF3CC;
+    --gold-pale:   #FFF8E7;
+    --black:       #1A1A1A;
+    --charcoal:    #2E2E2E;
+    --white:       #FFFFFF;
+    --cream:       #FAFAF7;
+    --border:      #E8E0CC;
+}
+
+/* ============================================================
+   RESET & BASE
+   ============================================================ */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--cream);
+    color: var(--black);
+    font-family: 'Lato', 'Times New Roman', serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+    min-height: 100vh;
+}
+
+/* ============================================================
+   TYPOGRAPHY
+   ============================================================ */
+h1, h2 {
+    font-family: 'Playfair Display', 'Times New Roman', serif;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+h3, h4 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+p {
+    margin-bottom: 12px;
+    color: var(--charcoal);
+}
+
+/* ============================================================
+   NAVIGATION
+   ============================================================ */
+nav {
+    background-color: var(--black);
+    padding: 0;
+    display: block;
+    text-align: center;
+    border-bottom: 3px solid var(--gold);
+}
+
+nav a {
+    display: inline-block;
+    color: var(--white);
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 18px 28px;
+    border-right: 1px solid #2E2E2E;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:first-child {
+    border-left: 1px solid #2E2E2E;
+}
+
+nav a:hover {
+    background-color: var(--gold);
+    color: var(--black);
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+header {
+    background-color: var(--black);
+    color: var(--white);
+    text-align: center;
+    padding: 60px 40px 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background-color: var(--gold);
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 4px;
+    background-color: var(--gold);
+}
+
+header h1 {
+    font-size: 42px;
+    color: var(--white);
+    margin-bottom: 10px;
+    letter-spacing: 3px;
+}
+
+header h2 {
+    font-size: 14px;
+    color: var(--gold);
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+/* ============================================================
+   HORIZONTAL RULE
+   ============================================================ */
+hr {
+    border: none;
+    height: 1px;
+    background-color: var(--border);
+    margin: 0;
+}
+
+/* ============================================================
+   PAGE WRAPPER / CONTENT AREA
+   ============================================================ */
+main, section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 32px;
+}
+
+/* ============================================================
+   SECTION HEADINGS
+   ============================================================ */
+h3 {
+    color: var(--black);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    position: relative;
+    display: block;
+}
+
+h3::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: var(--gold);
+    margin-top: 8px;
+}
+
+/* ============================================================
+   GENERAL TABLES (data tables)
+   ============================================================ */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+    font-size: 15px;
+    background-color: var(--white);
+}
+
+table th {
+    background-color: var(--black);
+    color: var(--gold);
+    padding: 14px 16px;
+    text-align: left;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+table td {
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--border);
+    color: var(--charcoal);
+    vertical-align: top;
+}
+
+table tr:last-child td {
+    border-bottom: none;
+}
+
+table tr:hover td {
+    background-color: var(--gold-pale);
+}
+
+table tr:nth-child(even) td {
+    background-color: #FDFCF8;
+}
+
+/* ============================================================
+   LISTS
+   ============================================================ */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    padding: 10px 0 10px 24px;
+    border-bottom: 1px solid var(--border);
+    color: var(--charcoal);
+    position: relative;
+    font-size: 15px;
+}
+
+ul li:last-child {
+    border-bottom: none;
+}
+
+ul li::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: var(--gold);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* ============================================================
+   LINKS
+   ============================================================ */
+a {
+    color: var(--gold-dark);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s, color 0.2s;
+}
+
+a:hover {
+    color: var(--black);
+    border-bottom-color: var(--gold);
+}
+
+/* ============================================================
+   PROFILE IMAGE
+   ============================================================ */
+img {
+    display: block;
+    border: 4px solid var(--gold);
+    outline: 1px solid var(--border);
+}
+
+/* ============================================================
+   CONTACT TABLE SPECIFIC
+   ============================================================ */
+table td strong {
+    color: var(--black);
+    font-weight: 700;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer {
+    background-color: var(--black);
+    color: #AAAAAA;
+    text-align: center;
+    padding: 30px 20px;
+    border-top: 3px solid var(--gold);
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+
+footer a {
+    color: var(--gold);
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-bottom: none;
+}
+
+footer a:hover {
+    color: var(--white);
+    border-bottom: none;
+}
+
+footer p {
+    margin: 6px 0;
+    color: #888888;
+}
+
+/* ============================================================
+   ASIDE / REFERENCE BLOCKS
+   ============================================================ */
+aside {
+    background-color: var(--white);
+    border-left: 4px solid var(--gold);
+    padding: 14px 18px;
+    margin-bottom: 14px;
+    font-size: 15px;
+}
+
+aside p {
+    margin: 0;
+    line-height: 1.7;
+}
